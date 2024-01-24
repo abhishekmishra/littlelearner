@@ -36,6 +36,8 @@
 ; apply w and b to the line-2 (x = 8) function
 (display ((line-2 8) 4 6))
 
+(newline)
+
 ; Given xs and ys, the parameterized function can
 ; be used to figure out the values of the w and b
 ; Once we have figured out w and b,
