@@ -59,3 +59,16 @@
 
 (display (shape (tensor 0)))
 (newline)
+
+; second attempt at rank (from pg 67 of book)
+; uses an accumulator design
+(define (rank t)
+    (ranked t 0))
+
+(define (ranked t a)
+  (cond
+    ((scalar? t) a)
+    (else (ranked (tensor-ref t 0) (add1 a)))))
+
+(display (rank (tensor (tensor (tensor 8) (tensor 9)) (tensor (tensor 4) (tensor 7)))))
+(newline)
